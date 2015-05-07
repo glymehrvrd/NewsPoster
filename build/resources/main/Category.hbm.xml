@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.glyme.hibernate.Category" table="category" schema="" catalog="newsposter">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name"/>
+        <set name="news" lazy="false" inverse="true" cascade="all-delete-orphan">
+            <key>
+                <column name="category_id"/>
+            </key>
+            <one-to-many class="org.glyme.hibernate.News"/>
+        </set>
+    </class>
+</hibernate-mapping>

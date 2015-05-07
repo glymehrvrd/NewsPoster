@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.glyme.hibernate.News" table="news" schema="" catalog="newsposter">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="increment"/>
+        </id>
+        <many-to-one name="category" class="org.glyme.hibernate.Category" column="category_id"/>
+        <property name="lastModifyDate" column="last_modify_date"/>
+        <property name="postDate" column="post_date"/>
+        <many-to-one name="poster" class="org.glyme.hibernate.User" column="username"/>
+        <property name="content" column="content"/>
+        <property name="title" column="title"/>
+        <set name="newsReviews" lazy="false" inverse="true" cascade="all-delete-orphan">
+            <key>
+                <column name="news_id"/>
+            </key>
+            <one-to-many class="org.glyme.hibernate.NewsReview"/>
+        </set>
+    </class>
+</hibernate-mapping>
