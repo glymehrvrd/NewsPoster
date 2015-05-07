@@ -1,5 +1,7 @@
 package org.glyme.hibernate;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 /**
  * Created by glyme on 15-5-6.
  */
@@ -12,17 +14,24 @@ public class User extends BaseObject {
 
     @Override
     public String toString() {
-        return null;
+        return new ToStringBuilder(this)
+                .append("username",username)
+                .append("password",password)
+                .toString();
     }
 
     @Override
     public boolean equals(Object o) {
-        return false;
+        if (!(o instanceof User)) {
+            return false;
+        }
+        User rhs = (User) o;
+        return username.equals(rhs.getUsername());
     }
 
     @Override
     public int hashCode() {
-        return 0;
+        return username.hashCode();
     }
 
     public String getPassword() {

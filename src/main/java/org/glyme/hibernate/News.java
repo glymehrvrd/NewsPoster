@@ -7,8 +7,7 @@ import java.util.Set;
 
 /**
  * Created by glyme on 15-5-6.
- * @hibernate.class table="news"
- * @structs.form include-all="false" extends="BaseForm"
+ *
  */
 public class News extends BaseObject {
     private Set newsReviews;
@@ -22,9 +21,13 @@ public class News extends BaseObject {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("id", id).append("title", title)
-                .append("postDate", postDate).append("content", content)
-                .append("lastModifyDate", lastModifyDate).append("category", category)
+        return new ToStringBuilder(this)
+                .append("id", id)
+                .append("title", title)
+                .append("postDate", postDate)
+                .append("content", content)
+                .append("lastModifyDate", lastModifyDate)
+                .append("category", category)
                 .append("newsReviews", newsReviews).toString();
     }
 

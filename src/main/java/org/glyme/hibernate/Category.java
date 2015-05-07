@@ -1,5 +1,7 @@
 package org.glyme.hibernate;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 import java.util.Set;
 
 /**
@@ -12,17 +14,25 @@ public class Category extends BaseObject {
 
     @Override
     public String toString() {
-        return null;
+        return new ToStringBuilder(this)
+                .append("id", id)
+                .append("name", name)
+                .append("news", news)
+                .toString();
     }
 
     @Override
     public boolean equals(Object o) {
-        return false;
+        if (!(o instanceof Category)) {
+            return false;
+        }
+        Category rhs = (Category) o;
+        return name.equals(rhs.getName());
     }
 
     @Override
     public int hashCode() {
-        return 0;
+        return name.hashCode();
     }
 
     public Long getId() {

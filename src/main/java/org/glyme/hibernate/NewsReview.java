@@ -1,5 +1,7 @@
 package org.glyme.hibernate;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 import java.util.Date;
 
 /**
@@ -15,17 +17,30 @@ public class NewsReview extends BaseObject {
 
     @Override
     public String toString() {
-        return null;
+        return new ToStringBuilder(this)
+                .append("id", id)
+                .append("content", content)
+                .append("lastModifyDate", lastModifyDate)
+                .append("news", news)
+                .append("postDate", postDate)
+                .append("poster", poster)
+                .toString();
     }
 
     @Override
     public boolean equals(Object o) {
-        return false;
+        if (!(o instanceof NewsReview)) {
+            return false;
+        }
+        NewsReview rhs = (NewsReview) o;
+        return postDate.equals(rhs.getPostDate())
+                && poster.equals(rhs.getPoster());
     }
 
     @Override
     public int hashCode() {
-        return 0;
+        return postDate.hashCode()
+                + poster.hashCode();
     }
 
     public String getContent() {
