@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="org.glyme.hibernate.User" table="user" schema="" catalog="newsposter">
+    <class name="org.glyme.business.pojo.User" table="user" schema="" catalog="newsposter">
         <id name="username" column="username"/>
         <property name="password" column="password"/>
     </class>

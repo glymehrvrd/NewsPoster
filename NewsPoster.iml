@@ -4,17 +4,15 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="b145127e-7d50-41e7-b74f-9f3283e337a5" />
-          <unit-entry name="sessionFactory" value="dataSource" />
+          <unit-entry name="sessionFactory" value="b145127e-7d50-41e7-b74f-9f3283e337a5" />
         </datasource-map>
         <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/spring-config.xml</file>
+        <fileset id="fileset2" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spring-config.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -60,5 +58,12 @@
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-orm:4.1.6.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-jdbc:4.1.6.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-tx:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: opensymphony:webwork:2.2.5" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: opensymphony:xwork:1.2.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: freemarker:freemarker:2.3.4" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: opensymphony:ognl:2.6.11" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.rifers:rife-continuations:0.0.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: opensymphony:oscore:2.2.4" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: junit:junit:3.8.1" level="project" />
   </component>
 </module>

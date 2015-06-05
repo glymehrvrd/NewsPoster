@@ -1,14 +1,10 @@
-import org.glyme.dao.FacadeManager;
-import org.glyme.hibernate.Category;
-import org.glyme.hibernate.News;
-import org.glyme.hibernate.NewsReview;
-import org.glyme.hibernate.User;
-import org.hibernate.*;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
+import org.glyme.business.pojo.Category;
+import org.glyme.business.pojo.News;
+import org.glyme.business.pojo.NewsReview;
+import org.glyme.business.pojo.User;
+import org.glyme.business.service.FacadeManager;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Date;
 
@@ -17,7 +13,7 @@ import java.util.Date;
  */
 public class Main {
     public static void main(final String[] args) throws Exception {
-        ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/java/spring-config.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-config.xml");
         FacadeManager manager = (FacadeManager) ctx.getBean("manager");
 
         Category category = new Category();

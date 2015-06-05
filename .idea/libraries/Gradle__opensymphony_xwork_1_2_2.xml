@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: opensymphony:xwork:1.2.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/opensymphony/xwork/1.2.2/150d36502dbb6bdd0bb12073e89b0bc433b58c9d/xwork-1.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/opensymphony/xwork/1.2.2/871302ed4e86a713b1c985a5c681468f02ca8b3f/xwork-1.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

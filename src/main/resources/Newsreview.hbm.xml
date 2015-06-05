@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="org.glyme.hibernate.NewsReview" table="newsreview" schema="" catalog="newsposter">
+    <class name="org.glyme.business.pojo.NewsReview" table="newsreview" schema="" catalog="newsposter">
         <id name="id" column="id" unsaved-value="null">
             <generator class="increment"/>
         </id>

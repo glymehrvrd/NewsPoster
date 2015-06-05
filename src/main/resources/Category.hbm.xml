@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="org.glyme.hibernate.Category" table="category" schema="" catalog="newsposter">
+    <class name="org.glyme.business.pojo.Category" table="category" schema="" catalog="newsposter">
         <id name="id" column="id" unsaved-value="null">
             <generator class="increment"/>
         </id>
@@ -13,7 +13,7 @@
             <key>
                 <column name="category_id"/>
             </key>
-            <one-to-many class="org.glyme.hibernate.News"/>
+            <one-to-many class="org.glyme.business.pojo.News"/>
         </set>
     </class>
 </hibernate-mapping>
